@@ -1,0 +1,562 @@
+{
+	"info": {
+		"_postman_id": "79593c66-effb-4c3b-8241-9682301561f8",
+		"name": "rsdami",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Obtener Productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rsdami/rs/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rsdami",
+								"rs",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"descripcion\": \"Enalapril para el kokoro\",\r\n        \"stock\": 10,\r\n        \"precio\": 34.2,\r\n        \"id_categoria\": 3,\r\n        \"unidadMed\" : \"miligramos\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/rsdami/rs/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rsdami",
+								"rs",
+								"productos"
+							]
+						},
+						"description": "POST"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rsdami/rs/productos/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rsdami",
+								"rs",
+								"productos",
+								"5"
+							]
+						},
+						"description": "GET"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Producto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"id_producto\" : 6,\r\n        \"descripcion\": \"gomitas naranja redox\",\r\n        \"stock\": 11,\r\n        \"precio\": 34.2,\r\n        \"id_categoria\": 3,\r\n        \"unidadMed\" : \"Gramos\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/rsdami/rs/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rsdami",
+								"rs",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Obtener Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rsdami/rs/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rsdami",
+								"rs",
+								"clientes"
+							]
+						},
+						"description": "GET"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nombres\": \"Carlos\",\r\n        \"ape_mat\": \"Zoila\",\r\n        \"ape_pat\": \"Baca\",\r\n        \"dni\": \"45452312\",\r\n        \"telefono\": 5100959847854\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/rsdami/rs/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rsdami",
+								"rs",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_ciente\": 3,\r\n    \"nombres\": \"Charlotte\",\r\n    \"ape_mat\": \"Zoila\",\r\n    \"ape_pat\": \"Baca\",\r\n    \"dni\": \"1111111\",\r\n    \"telefono\": 5100959847854\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/rsdami/rs/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rsdami",
+								"rs",
+								"clientes"
+							]
+						},
+						"description": "PUT"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rsdami/rs/clientes/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rsdami",
+								"rs",
+								"clientes",
+								"3"
+							]
+						},
+						"description": "GET"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Boleta",
+			"item": [
+				{
+					"name": "Crear Boleta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_cliente\": 4,\r\n    \"fecha\": \"2012-10-20\",\r\n    \"id_tienda\": 1,\r\n    \"total\": 0.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/rsdami/rs/boleta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rsdami",
+								"rs",
+								"boleta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Boleta por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rsdami/rs/boleta/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rsdami",
+								"rs",
+								"boleta",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Boleta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_boleta\": 1,\r\n    \"id_cliente\": 2,\r\n    \"fecha\": \"2012-10-20\",\r\n    \"id_tienda\": 1,\r\n    \"total\": 0.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/rsdami/rs/boleta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rsdami",
+								"rs",
+								"boleta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Boletas por Cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rsdami/rs/boleta/cliente/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rsdami",
+								"rs",
+								"boleta",
+								"cliente",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Añadir Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"id_detalle\":1,\r\n\"id_boleta\" :1,\r\n\"id_producto\":1,\r\n\"cantidad\" : 5 \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/rsdami/rs/boleta/item",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rsdami",
+								"rs",
+								"boleta",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Item ",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"id_detalle\":1,\r\n\"id_boleta\" :1,\r\n\"id_producto\":1,\r\n\"precio\" :23.1,\r\n\"cantidad\" : 7\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/rsdami/rs/boleta/item",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rsdami",
+								"rs",
+								"boleta",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rsdami/rs/boleta/item/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rsdami",
+								"rs",
+								"boleta",
+								"item",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "GET",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "45df7ffb-6a7a-4ac5-bcaa-67366ca7191f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "c8315a47-0afd-4515-b936-a307eb922dc5",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Farmacia",
+			"item": [
+				{
+					"name": "Obtener Farmacia",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rsdami/rs/farmacias/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rsdami",
+								"rs",
+								"farmacias",
+								"1"
+							]
+						},
+						"description": "GET\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Farmacia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nombre\": \"Casasasdad\",\r\n        \"ruc\": 1232312,\r\n        \"telefono\": 2647172\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/rsdami/rs/farmacias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rsdami",
+								"rs",
+								"farmacias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Farmacia",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id_tienda\": 1,\r\n        \"nombre\": \"inkafama\",\r\n        \"ruc\": 1232312,\r\n        \"telefono\": 2647172\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/rsdami/rs/farmacias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rsdami",
+								"rs",
+								"farmacias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Farmacias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rsdami/rs/farmacias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rsdami",
+								"rs",
+								"farmacias"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
