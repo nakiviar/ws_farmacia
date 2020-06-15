@@ -10,9 +10,6 @@ public class ProductoService {
 	ProductoRepository repository = ProductoRepository.getInstance();
 
 	public String addProducto(Producto producto) {
-		if(producto.getStock()==0)
-			return "Producto Agotado";
-		
 		repository.save(producto);
 		return "Producto Agregado";
 	}

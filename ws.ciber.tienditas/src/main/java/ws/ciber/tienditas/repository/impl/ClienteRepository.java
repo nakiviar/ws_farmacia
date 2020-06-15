@@ -48,6 +48,13 @@ public class ClienteRepository implements IClienteRepository {
 		} catch (SQLException e) {
 			// TODO: handle exception
 			System.out.println(e.toString());
+		} finally {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 	}

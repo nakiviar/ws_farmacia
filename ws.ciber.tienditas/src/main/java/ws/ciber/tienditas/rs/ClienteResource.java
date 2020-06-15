@@ -10,8 +10,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.Status;
 
 import ws.ciber.tienditas.entidad.Cliente;
 import ws.ciber.tienditas.service.ClienteService;
@@ -24,9 +22,9 @@ public class ClienteResource {
 	private ClienteService service = new ClienteService();
 
 	@POST
-	public Response crearCliente(Cliente cliente) {
-		service.addCliente(cliente);
-		return Response.status(Status.CREATED).entity(cliente).build();
+	public String crearCliente(Cliente cliente) {
+		return service.addCliente(cliente);
+		//return Response.status(Status.CREATED).entity(cliente).build();
 	}
 
 	@GET

@@ -37,7 +37,7 @@ insert into tb_categoria(descripcion) values('Inyectables');
 insert into tb_categoria(descripcion) values('Bebibles');
 insert into tb_categoria(descripcion) values('Unguentos');
 insert into tb_categoria(descripcion) values('otros');
-
+-- agregar estado del prod
 create table tb_producto(
 id_producto int auto_increment,
 descripcion varchar(500) not null,
@@ -65,10 +65,12 @@ create table tb_detalle_boleta(
 id_detalle int not null auto_increment,
 id_boleta int not null references tb_boleta,
 id_producto int not null references tb_producto,
-precio decimal(10,2) not null,
+precio decimal(10,2) null,
 cantidad int not null,
 PRIMARY KEY(id_detalle)
 );
 
 insert into tb_detalle_boleta(id_boleta,id_producto,precio,cantidad) values (1,1,24.34,5),(1,2,24.34,5);
-
+	
+select * from tb_cliente where id_cliente = 1;
+update tb_cliente set dni="213123",nombres="oliver",ape_mat="ipsum",ape_pat="ipsum",telefono=4646546 where id_cliente=1;

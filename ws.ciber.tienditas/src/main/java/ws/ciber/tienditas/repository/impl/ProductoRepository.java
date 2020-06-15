@@ -36,19 +36,26 @@ public class ProductoRepository implements IProductoRepository {
 
 			con = MySqlConexion.getConexion();
 
-			String sql = "insert into tb_producto(descripcion,stock,precio,id_categoria) values(?,?,?,?)";
+			String sql = "insert into tb_producto(descripcion,stock,precio,id_categoria,unidadMed) values(?,?,?,?,?)";
 
 			pst = con.prepareStatement(sql);
 			pst.setString(1, producto.getDescripcion());
 			pst.setInt(2, producto.getStock());
 			pst.setDouble(3, producto.getPrecio());
 			pst.setInt(4, producto.getId_categoria());
-
+			pst.setString(5, producto.getUnidadMed());
 			pst.executeUpdate();
 
 		} catch (SQLException e) {
 			// TODO: handle exception
 			System.out.println(e.toString());
+		} finally {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 	}
