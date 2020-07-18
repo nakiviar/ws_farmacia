@@ -10,7 +10,9 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import ws.ciber.tienditas.entidad.Boleta;
 import ws.ciber.tienditas.entidad.DetalleBoleta;
@@ -65,6 +67,15 @@ public class BoletaResource {
 	@Path("/item")
 	public String guardarItem(DetalleBoleta item) {
 		return service.updateItem(item);
+	}
+	
+	@POST
+	@Path("/app")
+	public Response getCustomers(
+			@QueryParam("origen") String origen, 
+			@QueryParam("eai_URLDestino") String eai_URLDestino) {
+		String result = String.format("origen = %s, eai_URLDestino = %s", new String[]{origen, eai_URLDestino});
+		return Response.ok(result).build();
 	}
 	
 	
